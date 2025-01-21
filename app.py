@@ -286,7 +286,6 @@ def create_order():
         # Commit the order, product associations, and stock changes
         db.session.commit()
         
-        # Return the created order
         return jsonify(new_order.to_dict()), 201
     
     except Exception as e:
